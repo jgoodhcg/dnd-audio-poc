@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Control Interface</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+        }
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        input, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        button:disabled {
+            background-color: #ccc;
+            border-color: #ccc;
+        }
+        #playbackContainer {
+            flex-direction: column;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <input type="password" id="apiToken" placeholder="Enter your API token here">
+        <button id="startBtn">Start Listening</button>
+        <button id="stopBtn" disabled>Stop Listening</button>
+        <div id="playbackContainer"></div>
+        <div id="typingContainer"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
